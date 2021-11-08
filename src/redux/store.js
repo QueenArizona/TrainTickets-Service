@@ -7,6 +7,7 @@ import progressReducer from "./progress/reducer";
 import trainReducer from "./train/reducer";
 import coachReducer from "./coach/reducer";
 import passengersReducer from "./passengers/reducer";
+import payReducer from "./pay/reducer";
 
 const reducer = combineReducers({
   subscription: subscriptionReducer,
@@ -16,6 +17,7 @@ const reducer = combineReducers({
   train: trainReducer,
   coach: coachReducer,
   passengers: passengersReducer,
+  pay: payReducer,
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
