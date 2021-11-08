@@ -299,3 +299,40 @@
 .food-service--active {
   background-image: url("./img/options/food-service-active.svg");
 }
+
+.card {
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  background-color: #ffffff;
+}
+
+.card__title {
+  padding: 35px;
+
+  background-color: #f9f9f9;
+
+  font-weight: 400;
+  text-transform: none;
+}
+
+.card__form-title {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card__form-field {
+  display: block;
+
+  padding: 12px 15px;
+  margin-top: 8px;
+  border: 1px solid #928f94;
+  border-radius: 5px;
+
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.card__form-field::placeholder {
+  color: #c4c4c4;
+}

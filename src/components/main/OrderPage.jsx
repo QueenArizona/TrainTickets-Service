@@ -6,6 +6,7 @@ import OrderSidebar from "../sidebar/OrderSidebar";
 import DetailsSidebar from "../sidebar/DetailsSidebar";
 import TrainSelect from "../tickets/TrainSelect";
 import SeatsSelect from "../tickets/SeatsSelect";
+import PassengersForm from "../forms/PassengersForm";
 
 function OrderPage(props) {
   return (
@@ -24,6 +25,7 @@ function OrderPage(props) {
             <Switch>
               <Route path="/order/tickets/train" component={TrainSelect} />
               <Route path="/order/tickets/seats" component={SeatsSelect} />
+              <Route path="/order/passengers" component={PassengersForm} />
             </Switch>
           </div>
         </div>
