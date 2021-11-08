@@ -3,6 +3,8 @@ import "./App.css";
 import Header from "./components/header/Header";
 import HomePage from "./components/main/HomePage";
 import OrderPage from "./components/main/OrderPage";
+import SuccessOrderPage from "./components/main/SuccessOrderPage";
+
 import Footer from "./components/footer/Footer";
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/order" component={OrderPage} />
+            <Route path="/success" component={SuccessOrderPage} />
           </Switch>
         </main>
         <Footer />
