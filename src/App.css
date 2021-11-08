@@ -1,38 +1,107 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  src: local(""),
+    url("./fonts/roboto-v20-latin_cyrillic-100.woff2") format("woff2"),
+    url("./fonts/roboto-v20-latin_cyrillic-100.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""),
+    url("./fonts/roboto-v20-latin_cyrillic-300.woff2") format("woff2"),
+    url("./fonts/roboto-v20-latin_cyrillic-300.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 300;
+  src: local(""),
+    url("./fonts/roboto-v20-latin_cyrillic-300italic.woff2") format("woff2"),
+    url("./fonts/roboto-v20-latin_cyrillic-300italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("./fonts/roboto-v20-latin_cyrillic-regular.woff2") format("woff2"),
+    url("./fonts/roboto-v20-latin_cyrillic-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""),
+    url("./fonts/roboto-v20-latin_cyrillic-500.woff2") format("woff2"),
+    url("./fonts/roboto-v20-latin_cyrillic-500.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("./fonts/roboto-v20-latin_cyrillic-700.woff2") format("woff2"),
+    url("./fonts/roboto-v20-latin_cyrillic-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local(""),
+    url("./fonts/roboto-v20-latin_cyrillic-900.woff2") format("woff2"),
+    url("./fonts/roboto-v20-latin_cyrillic-900.woff") format("woff");
+}
+
 .App {
-  text-align: center;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+  width: 1417px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+  text-transform: uppercase;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title--large {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 84px;
+  text-transform: none;
+  color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.title--middle {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 42px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title--small {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 35px;
+}
+
+.button {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+
+  background-color: transparent;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #ffffff;
 }
