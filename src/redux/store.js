@@ -1,7 +1,10 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
+import subscriptionReducer from "./subscription/reducer";
 
-const reducer = combineReducers({});
+const reducer = combineReducers({
+  subscription: subscriptionReducer,
+});
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
