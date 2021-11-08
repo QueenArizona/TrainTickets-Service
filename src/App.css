@@ -220,3 +220,82 @@
   line-height: 21px;
   color: #c4c4c4;
 }
+
+.service {
+  width: 36px;
+  height: 34.11px;
+  border: 1px solid #292929;
+  border-radius: 5px;
+
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.service:nth-child(n + 2) {
+  margin-left: 13px;
+}
+
+.service:hover {
+  background-color: #ffa800;
+}
+
+.service--active {
+  border-color: #fdb935;
+
+  background-color: #fdb935;
+}
+
+.service:disabled {
+  border-color: #fcdc9d;
+
+  background-color: #fcdc9d;
+}
+
+.air-service {
+  background-image: url("./img/options/air-service.svg");
+}
+
+.air-service:disabled {
+  background-image: url("./img/options/air-service-disable.svg");
+}
+
+.air-service--active {
+  background-image: url("./img/options/air-service-active.svg");
+}
+
+.wifi-service {
+  background-image: url("./img/options/wifi-service.svg");
+}
+
+.wifi-service:disabled {
+  background-image: url("./img/options/wifi-service-disable.svg");
+}
+
+.wifi-service--active {
+  background-image: url("./img/options/wifi-service-active.svg");
+}
+
+.linens-service {
+  background-image: url("./img/options/linen-service.svg");
+}
+
+.linens-service:disabled {
+  background-image: url("./img/options/linen-service-disable.svg");
+}
+
+.linens-service--active {
+  background-image: url("./img/options/linen-service-active.svg");
+}
+
+.food-service {
+  background-image: url("./img/options/food-service.svg");
+}
+
+.food-service:disabled {
+  background-image: url("./img/options/food-service-disable.svg");
+}
+
+.food-service--active {
+  background-image: url("./img/options/food-service-active.svg");
+}

@@ -9,6 +9,11 @@ import {
   trainListFailure,
   trainListSuccess,
 } from "../train/actions";
+import {
+  coachListRequest,
+  coachListFailure,
+  coachListSuccess,
+} from "../coach/actions";
 
 // Подписка на новости
 export const subscriptionFetch = (email) => async (dispatch) => {
@@ -80,5 +85,26 @@ export const trainListFetch = (filter) => async (dispatch) => {
     }
   } catch (e) {
     dispatch(trainListFailure(e.message));
+  }
+};
+
+// Загрузка списка вагонов
+export const coachListFetch = (id) => async (dispatch) => {
+  dispatch(coachListRequest());
+  try {
+    const response = await fetch(
+      `https://fe-diplom.herokuapp.com/routes/${id}/seats`
+    );
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+    const data = await response.json();
+
+    if (data) {
+      dispatch(coachListSuccess(data));
+    }
+  } catch (e) {
+    dispatch(coachListFailure(e.message));
   }
 };
