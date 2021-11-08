@@ -172,3 +172,51 @@
 .sidebar__title {
   text-transform: none;
 }
+
+.route {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.route__info--right {
+  text-align: right;
+}
+
+.route__time {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.route__date {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.route__city {
+  margin-bottom: 3px;
+
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: capitalize;
+}
+
+.route__station {
+  font-size: 16px;
+  line-height: 18px;
+  color: #928f94;
+  white-space: pre-line;
+}
+
+.route__duration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.route__duration-time {
+  font-size: 18px;
+  line-height: 21px;
+  color: #c4c4c4;
+}
