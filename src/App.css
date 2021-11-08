@@ -115,3 +115,60 @@
 .react-datepicker-popper {
   z-index: 999 !important;
 }
+
+.currency-item {
+  background-image: url("./img/elements/currency.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.sidebar__inner {
+  padding: 26px 34px 34px 34px;
+}
+
+.sidebar__inner--hide {
+  display: none;
+}
+
+.sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  padding-left: 44px;
+  margin-bottom: 22px;
+
+  background-repeat: no-repeat;
+}
+
+.sidebar__header--route--to {
+  background-image: url("./img/arrows/sidebar-route-to.svg");
+}
+
+.sidebar__header--route--back {
+  background-image: url("./img/arrows/sidebar-route-back.svg");
+}
+
+.sidebar__header--passengers {
+  background-image: url("./img/elements/passenger.svg");
+}
+
+.sidebar__date {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.sidebar__button {
+  width: 20px;
+  height: 20px;
+  border: 0;
+
+  background-image: url("./img/elements/sidebar-hide-button.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.sidebar__title {
+  text-transform: none;
+}
