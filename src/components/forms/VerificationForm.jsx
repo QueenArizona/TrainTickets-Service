@@ -57,7 +57,7 @@ function VerificationForm(props) {
                 </div>
                 <div className="passenger__card-content">
                   <h6 className="passenger__card-content-title">
-                    {el.surname} {el.name} {el.lastname}
+                    {el.surname.trim()} {el.name.trim()} {el.lastname.trim()}
                   </h6>
                   <p className="passenger__card-content-text">
                     Пол {el.sex === "male" ? "мужской" : "женский"}

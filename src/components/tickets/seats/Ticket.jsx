@@ -30,7 +30,7 @@ function Ticket({ type }) {
   const available = {
     adult: 4 - passengersCount.adult - passengersCount.child,
     child:
-      passengersCount.adult == 0
+      passengersCount.adult === 0
         ? 3
         : 4 - passengersCount.adult - passengersCount.child,
     baby: passengersCount.adult,
@@ -60,9 +60,9 @@ function Ticket({ type }) {
   };
 
   const handleChange = (name, value) => {
-    if (Number(available[name]) + Number(passengersCount[name]) < value) return;
+    if (available[name] + passengersCount[name] < value) return;
     if (name === "baby" && available[name] < value) return;
-    dispatch(passengersCountChange(name, value));
+    dispatch(passengersCountChange(name, Number(value)));
   };
 
   const handleClick = (type) => {
@@ -120,7 +120,8 @@ function Ticket({ type }) {
             </select>
             {available.adult > 0 && (
               <p className="ticket__count-text">
-                Можно добавить еще {available.adult} пассажиров{" "}
+                Можно добавить еще {available.adult}{" "}
+                {available.adult > 1 ? "пассажиров" : "пассажира"}
               </p>
             )}
           </div>
@@ -145,7 +146,8 @@ function Ticket({ type }) {
             </select>
             {available.child > 0 && (
               <p className="ticket__count-text">
-                Можно добавить еще {available.child} детей до 10 лет.Свое место
+                Можно добавить еще {available.child}{" "}
+                {available.child > 1 ? "детей" : "ребенка"} до 10 лет.Свое место
                 в вагоне, как у взрослых, но дешевле в среднем на 50-65%
               </p>
             )}

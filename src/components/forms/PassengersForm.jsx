@@ -16,7 +16,7 @@ function PassengersForm(props) {
   useEffect(() => {
     const passengersArr = [];
     const count = Array.from(Object.values(passengersCount)).reduce(
-      (el, acc) => Number(acc) + Number(el),
+      (el, acc) => acc + el,
       0
     );
     for (let i = 1; i <= count; i++) {
@@ -29,7 +29,7 @@ function PassengersForm(props) {
     if (
       passengers.length ===
       Array.from(Object.values(passengersCount)).reduce(
-        (el, acc) => Number(acc) + Number(el),
+        (el, acc) => acc + el,
         0
       )
     ) {
@@ -43,23 +43,19 @@ function PassengersForm(props) {
       {passengersCards
         .slice(
           0,
-          passengersCards.length -
-            Number(passengersCount.child) -
-            Number(passengersCount.baby)
+          passengersCards.length - passengersCount.child - passengersCount.baby
         )
         .map((el, index) => (
           <Passenger key={index} number={index + 1} type="adult" />
         ))}
       {passengersCards
         .slice(
-          passengersCards.length -
-            Number(passengersCount.child) -
-            Number(passengersCount.baby)
+          passengersCards.length - passengersCount.child - passengersCount.baby
         )
         .map((el, index) => (
           <Passenger
             key={index}
-            number={index + Number(passengersCount.adult) + 1}
+            number={index + passengersCount.adult + 1}
             type="child"
           />
         ))}

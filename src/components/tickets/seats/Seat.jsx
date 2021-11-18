@@ -45,13 +45,8 @@ function Seat({ id, number, type, left, available }) {
     if (seats[id] && seats[id].includes(number)) {
       dispatch(seatsItemUnselect(id, number));
     } else {
-      if (
-        seatsCount <
-        Number(passengersCount.adult) + Number(passengersCount.child)
-      ) {
+      if (seatsCount < passengersCount.adult + passengersCount.child) {
         dispatch(seatsItemSelect(id, number));
-      } else {
-        console.log("НЕТ МЕСТ");
       }
     }
   };

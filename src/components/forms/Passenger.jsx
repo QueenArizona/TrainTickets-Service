@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addPassengersData } from "../../redux/passengers/actions";
 import "./Passenger.css";
+import validateDocument from "../../functions/validateDocument";
 
 function Passenger({ number, type }) {
   const [docType, setDocType] = useState(
@@ -37,12 +38,14 @@ function Passenger({ number, type }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (
-      form.surname &&
-      form.name &&
-      form.lastname &&
+      form.surname.trim() &&
+      form.name.trim() &&
+      form.lastname.trim() &&
       form.sex &&
       form.birth &&
-      form.document
+      (!form.series ||
+        (form.series && validateDocument("series", form.series))) &&
+      validateDocument(type, form.document)
     ) {
       dispatch(addPassengersData(number, form));
     }

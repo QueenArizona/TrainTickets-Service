@@ -14,9 +14,9 @@ function App() {
         <Header />
         <main className="main">
           <Switch>
-            <Route exact path="/" component={HomePage} />
             <Route path="/order" component={OrderPage} />
             <Route path="/success" component={SuccessOrderPage} />
+            <Route path="/" component={HomePage} />
           </Switch>
         </main>
         <Footer />
